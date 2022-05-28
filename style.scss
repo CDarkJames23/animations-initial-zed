@@ -1,9 +1,51 @@
+@font-face {
+  font-family: Didot;
+  src: url(fonts/Didot\ Medium.ttf);
+}
+
 #myVideo {
   position: fixed;
   right: 0;
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
+}
+
+body > #header {
+  position: fixed;
+}
+
+#header {
+  position: fixed;
+  z-index: 9000;
+  overflow: auto;
+  transition: all 0.15s linear;
+  overflow: hidden;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.header-image {
+  background-image: url("logo5.png");
+  width: 170px;
+  height: 50px;
+  background-size: cover;
+}
+
+#header.active {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  background: white;
+  .header-image {
+    background-image: url("lapis-logo.jpg");
+  }
+
+  i {
+    color: black;
+  }
+}
+
+body {
+  overflow-x: hidden;
 }
 
 /* Add some content at the bottom of the video/page */
@@ -32,7 +74,7 @@
   color: black;
 }
 
-$dark-blue: rgba(45, 56, 73, 255);
+$dark-blue: #323861;
 $hilight-color: #03cfbe;
 $hilight-dark: #00978b;
 
@@ -63,7 +105,43 @@ $dark-white: rgba(244, 244, 244, 0.552);
 * {
   box-sizing: border-box;
   margin: 0;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Didot Medium", serif;
+}
+
+.statistics {
+  background-color: $dark-blue;
+
+  .row {
+    background-color: #2d3258;
+    text-align: center;
+    color: white;
+    padding: 3em 0;
+    border-radius: 20px;
+  }
+
+  &__section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    p {
+      margin-top: 1rem;
+      color: rgb(199, 201, 217);
+    }
+  }
+  &__number {
+    background-color: #222647;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+    font-size: 45px;
+  }
 }
 
 img {
@@ -118,10 +196,6 @@ img {
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.26);
 }
 
-.container {
-  padding: 3rem;
-}
-
 p {
   font-size: 18px;
   font-weight: 500;
@@ -140,14 +214,6 @@ p {
   font-size: 20px;
   line-height: 1.35em;
   font-weight: 400;
-  font-family: "Roboto", sans-serif;
-}
-
-h1 {
-  font-weight: 900;
-  font-size: 30px;
-  line-height: 1.1em;
-  letter-spacing: -1px;
   font-family: "Roboto", sans-serif;
 }
 
@@ -200,11 +266,10 @@ h4 {
   }
 
   h1 {
-    font-weight: 900;
+    font-weight: 400;
     font-size: 71px;
     line-height: 1.1em;
-    letter-spacing: -2px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Libre Bodoni", serif;
   }
 
   h2 {
@@ -494,39 +559,15 @@ button {
   background-color: $dark-white;
 }
 
-.red {
-  border-radius: 3rem;
-  background-color: blue !important;
-}
-
-.left-container {
-  margin-left: 20%;
+.item {
+  img {
+    max-width: 300px;
+  }
 }
 
 @media (min-width: 1000px) {
   .slick-list {
     padding: 0 20% 0 0 !important;
-  }
-}
-
-@media (min-width: 768px) {
-  .container-right {
-    margin-right: 0;
-    margin-left: calc(50vw - 375px);
-  }
-}
-
-@media (min-width: 992px) {
-  .container-right {
-    margin-right: 0;
-    margin-left: calc(50vw - 520px);
-  }
-}
-
-@media (min-width: 1200px) {
-  .container-right {
-    margin-right: 0;
-    margin-left: calc(50vw - 608px);
   }
 }
 

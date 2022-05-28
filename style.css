@@ -6,6 +6,42 @@
   min-height: 100%;
 }
 
+body > #header {
+  position: fixed;
+}
+
+#header {
+  position: fixed;
+  z-index: 9000;
+  overflow: auto;
+  transition: all 0.15s linear;
+  overflow: hidden;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.header-image {
+  background-image: url("logo5.png");
+  width: 170px;
+  height: 50px;
+  background-size: cover;
+}
+
+#header.active {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  background: white;
+}
+#header.active .header-image {
+  background-image: url("lapis-logo.jpg");
+}
+#header.active i {
+  color: black;
+}
+
+body {
+  overflow-x: hidden;
+}
+
 /* Add some content at the bottom of the video/page */
 .content {
   position: fixed;
@@ -38,12 +74,44 @@
   font-family: "Work Sans", sans-serif;
 }
 
+.statistics {
+  background-color: #323861;
+}
+.statistics .row {
+  background-color: #2d3258;
+  text-align: center;
+  color: white;
+  padding: 3em 0;
+  border-radius: 20px;
+}
+.statistics__section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.statistics__section p {
+  margin-top: 1rem;
+  color: rgb(199, 201, 217);
+}
+.statistics__number {
+  background-color: #222647;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: 45px;
+}
+
 img {
   width: 100%;
 }
 
 header {
-  background-color: rgb(45, 56, 73);
+  background-color: #323861;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
@@ -69,7 +137,7 @@ header a:hover {
 }
 header button {
   background-color: white;
-  color: rgb(45, 56, 73);
+  color: #323861;
 }
 header button:hover {
   background-color: rgba(244, 244, 244, 0.552);
@@ -85,10 +153,6 @@ body {
 
 img {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.26);
-}
-
-.container {
-  padding: 3rem;
 }
 
 p {
@@ -112,17 +176,9 @@ p {
   font-family: "Roboto", sans-serif;
 }
 
-h1 {
-  font-weight: 900;
-  font-size: 30px;
-  line-height: 1.1em;
-  letter-spacing: -1px;
-  font-family: "Roboto", sans-serif;
-}
-
 h2 {
   font-size: 24px;
-  color: rgb(45, 56, 73);
+  color: #323861;
   letter-spacing: -0.6px;
   padding-bottom: 0.27em;
 }
@@ -169,16 +225,15 @@ h4 {
   }
 
   h1 {
-    font-weight: 900;
+    font-weight: 400;
     font-size: 71px;
     line-height: 1.1em;
-    letter-spacing: -2px;
-    font-family: "Roboto", sans-serif;
+    font-family: "Libre Bodoni", serif;
   }
 
   h2 {
     font-size: 62px;
-    color: rgb(45, 56, 73);
+    color: #323861;
     letter-spacing: -0.6px;
     padding-bottom: 0.27em;
   }
@@ -239,7 +294,7 @@ button:hover {
 }
 
 .home-header {
-  background-color: rgb(45, 56, 73);
+  background-color: #323861;
   color: white;
   padding: 5rem;
   padding-top: 8em;
@@ -252,7 +307,7 @@ button:hover {
 }
 .home-header button {
   background-color: white;
-  color: rgb(45, 56, 73);
+  color: #323861;
 }
 .home-header button:hover {
   background-color: rgb(183, 183, 183);
@@ -281,7 +336,7 @@ button:hover {
 .slider-container__subtitle {
   font-family: "Work Sans", sans-serif;
   font-weight: 400;
-  color: rgb(45, 56, 73);
+  color: #323861;
   font-size: 40px;
   line-height: 1.6em;
 }
@@ -303,7 +358,7 @@ button:hover {
 }
 
 .CTA-banner {
-  background-color: rgb(45, 56, 73);
+  background-color: #323861;
   padding-top: 8rem;
   padding-bottom: 6rem;
   text-align: center;
@@ -317,7 +372,7 @@ button:hover {
 }
 
 .CTA-thin-banner {
-  background-color: rgb(45, 56, 73);
+  background-color: #323861;
   color: white;
 }
 .CTA-thin-banner h3 {
@@ -325,7 +380,7 @@ button:hover {
 }
 .CTA-thin-banner button {
   background-color: white;
-  color: rgb(45, 56, 73);
+  color: #323861;
 }
 .CTA-thin-banner p {
   color: white;
@@ -398,12 +453,12 @@ button:hover {
 .next {
   border-radius: 50%;
   padding: 2rem;
-  border: 2px solid rgb(45, 56, 73);
+  border: 2px solid #323861;
   width: 50px;
   height: 50px;
   font-weight: lighter;
   display: inline-block;
-  color: rgb(45, 56, 73);
+  color: #323861;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -411,7 +466,7 @@ button:hover {
 }
 .prev:hover,
 .next:hover {
-  background-color: rgb(45, 56, 73);
+  background-color: #323861;
   color: white;
 }
 
@@ -430,13 +485,8 @@ button:hover {
   background-color: rgba(244, 244, 244, 0.552);
 }
 
-.red {
-  border-radius: 3rem;
-  background-color: blue !important;
-}
-
-.left-container {
-  margin-left: 20%;
+.item img {
+  max-width: 300px;
 }
 
 @media (min-width: 1000px) {
@@ -444,30 +494,12 @@ button:hover {
     padding: 0 20% 0 0 !important;
   }
 }
-@media (min-width: 768px) {
-  .container-right {
-    margin-right: 0;
-    margin-left: calc(50vw - 375px);
-  }
-}
-@media (min-width: 992px) {
-  .container-right {
-    margin-right: 0;
-    margin-left: calc(50vw - 520px);
-  }
-}
-@media (min-width: 1200px) {
-  .container-right {
-    margin-right: 0;
-    margin-left: calc(50vw - 608px);
-  }
-}
 .block {
   height: 5em;
   line-height: 5em;
   width: 10em;
   background: #464646;
-  color: #fdfdfd;
+  color: #cc1616;
   text-align: center;
   margin: 1em auto;
   text-shadow: 0 0 1px #333;
@@ -527,7 +559,7 @@ footer .link {
 }
 footer a {
   text-decoration: none;
-  color: rgb(45, 56, 73);
+  color: #323861;
 }
 footer a:hover {
   color: #03cfbe;
