@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Didot Medium";
+  src: url(fonts/Didot\ Medium.ttf);
+}
 #myVideo {
   position: fixed;
   right: 0;
@@ -76,13 +80,8 @@ body {
 
 .statistics {
   background-color: #323861;
-}
-.statistics .row {
-  background-color: #2d3258;
-  text-align: center;
   color: white;
   padding: 3em 0;
-  border-radius: 20px;
 }
 .statistics__section {
   display: flex;
@@ -133,7 +132,7 @@ header a {
   transition: 1s;
 }
 header a:hover {
-  color: #03cfbe;
+  color: rgb(255, 177, 8);
 }
 header button {
   background-color: white;
@@ -149,10 +148,6 @@ body {
 
 .overflow {
   overflow: hidden;
-}
-
-img {
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.26);
 }
 
 p {
@@ -187,15 +182,15 @@ h3 {
   font-size: 21px;
   font-weight: 900;
   line-height: 2em;
-  letter-spacing: -2px;
   color: rgb(62, 62, 62);
+  font-family: "Didot Medium";
 }
 
 h4 {
   font-size: 20px;
   font-weight: 900;
   line-height: 2em;
-  color: rgb(62, 62, 62);
+  color: white;
 }
 
 @media (min-width: 900px) {
@@ -225,40 +220,44 @@ h4 {
   }
 
   h1 {
-    font-weight: 400;
-    font-size: 71px;
+    font-weight: 500;
+    font-size: 100px;
     line-height: 1.1em;
-    font-family: "Libre Bodoni", serif;
+    font-family: "Didot Medium", serif;
+    text-transform: uppercase;
   }
 
   h2 {
     font-size: 62px;
+    font-weight: 400;
     color: #323861;
-    letter-spacing: -0.6px;
+    letter-spacing: -5px;
     padding-bottom: 0.27em;
+    line-height: 1em;
   }
 
   h3 {
     font-size: 27px;
     font-weight: 900;
     line-height: 2em;
-    letter-spacing: -2px;
     color: rgb(62, 62, 62);
   }
 
-  h4 {
-    font-size: 24px;
-    font-weight: 900;
-    line-height: 2em;
-    color: rgb(62, 62, 62);
+  h5 {
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+    color: #323861;
+    padding-bottom: 0.27em;
+    line-height: 1em;
   }
 }
 button {
   display: inline-block;
-  background-color: #03cfbe;
+  background-color: rgb(255, 177, 8);
   border: none;
   border-radius: 0.3rem;
-  color: white;
+  color: #222647;
   font-size: 16px;
   padding: 1rem 2rem;
   margin: 1.5rem 0;
@@ -270,7 +269,21 @@ button i {
   padding-left: 1em;
 }
 button:hover {
-  background-color: #00978b;
+  background-color: rgb(212, 148, 9);
+}
+
+.secondary-bttn {
+  background-color: rgb(251, 233, 193);
+}
+
+.hero {
+  background-image: url("adults.jpg");
+  background-size: cover;
+}
+.hero__overlay {
+  background-color: rgba(50, 56, 97, 0.9411764706);
+  padding: 5rem;
+  padding-top: 8em;
 }
 
 .blog h2 {
@@ -288,7 +301,7 @@ button:hover {
   border-radius: 6px;
 }
 .blog span a {
-  color: #03cfbe;
+  color: rgb(255, 177, 8);
   text-decoration: none;
   font-weight: 600;
 }
@@ -296,8 +309,6 @@ button:hover {
 .home-header {
   background-color: #323861;
   color: white;
-  padding: 5rem;
-  padding-top: 8em;
 }
 .home-header h1 {
   margin-bottom: 0.5em;
@@ -306,8 +317,8 @@ button:hover {
   color: white;
 }
 .home-header button {
-  background-color: white;
-  color: #323861;
+  background-color: rgb(255, 177, 8);
+  color: #222647;
 }
 .home-header button:hover {
   background-color: rgb(183, 183, 183);
@@ -346,8 +357,25 @@ button:hover {
   width: 100%;
 }
 
+.features {
+  padding: 0em 0;
+  margin-top: -260px;
+}
+.features .watermark {
+  position: relative;
+  font-size: 300px;
+  font-weight: 900;
+  overflow: hidden;
+  color: rgba(240, 240, 240, 0.5411764706);
+  z-index: -222222;
+  top: 220px;
+  left: -100px;
+}
+.features .h2 {
+  color: #697285;
+}
 .features .col {
-  padding: 3em 0;
+  padding-bottom: 6em;
 }
 
 .mission {
@@ -355,6 +383,11 @@ button:hover {
   background-color: rgba(244, 244, 244, 0.552);
   padding: 3em 0;
   padding-top: 8em;
+}
+
+img {
+  height: 100%;
+  border-radius: 20px;
 }
 
 .CTA-banner {
@@ -374,8 +407,9 @@ button:hover {
 .CTA-thin-banner {
   background-color: #323861;
   color: white;
+  padding: 5em 0;
 }
-.CTA-thin-banner h3 {
+.CTA-thin-banner h5 {
   color: white;
 }
 .CTA-thin-banner button {
@@ -562,7 +596,7 @@ footer a {
   color: #323861;
 }
 footer a:hover {
-  color: #03cfbe;
+  color: rgb(255, 177, 8);
 }
 @-webkit-keyframes bounceInLeft {
   0% {

@@ -1,5 +1,5 @@
 @font-face {
-  font-family: Didot;
+  font-family: "Didot Medium";
   src: url(fonts/Didot\ Medium.ttf);
 }
 
@@ -75,8 +75,9 @@ body {
 }
 
 $dark-blue: #323861;
-$hilight-color: #03cfbe;
-$hilight-dark: #00978b;
+$darker-blue: #222647;
+$hilight-color: rgb(255, 177, 8);
+$hilight-dark: rgb(212, 148, 9);
 
 $light-blue: #e3ecec;
 $grey: #697285;
@@ -105,19 +106,21 @@ $dark-white: rgba(244, 244, 244, 0.552);
 * {
   box-sizing: border-box;
   margin: 0;
-  font-family: "Didot Medium", serif;
+  font-family: "Work Sans", sans-serif;
 }
 
 .statistics {
   background-color: $dark-blue;
+  color: white;
+  padding: 3em 0;
 
-  .row {
-    background-color: #2d3258;
-    text-align: center;
-    color: white;
-    padding: 3em 0;
-    border-radius: 20px;
-  }
+  // .row {
+  //   background-color: #2d3258;
+  //   text-align: center;
+  //   color: white;
+  //   padding: 3em 0;
+  //   border-radius: 20px;
+  // }
 
   &__section {
     display: flex;
@@ -143,6 +146,46 @@ $dark-white: rgba(244, 244, 244, 0.552);
     font-size: 45px;
   }
 }
+
+// .statistics {
+//   background-color: #fbfcfe;
+
+//   color: $dark-blue;
+//   padding: 3em 0;
+
+//   // .row {
+//   //   background-color: #2d3258;
+//   //   text-align: center;
+//   //   color: white;
+//   //   padding: 3em 0;
+//   //   border-radius: 20px;
+//   // }
+
+//   &__section {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     flex-direction: column;
+
+//     p {
+//       margin-top: 1rem;
+//       color: rgb(99, 100, 104);
+//     }
+//   }
+//   &__number {
+//     background-color: #ecedf8;
+//     width: 130px;
+//     height: 130px;
+//     border-radius: 50%;
+//     display: flex;
+//     align-items: center;
+//     text-align: center;
+//     justify-content: center;
+//     font-weight: 500;
+
+//     font-size: 45px;
+//   }
+// }
 
 img {
   width: 100%;
@@ -192,10 +235,6 @@ body {
   overflow: hidden;
 }
 
-img {
-  box-shadow: 0 3px 10px rgb(0 0 0 / 0.26);
-}
-
 p {
   font-size: 18px;
   font-weight: 500;
@@ -228,15 +267,15 @@ h3 {
   font-size: 21px;
   font-weight: 900;
   line-height: 2em;
-  letter-spacing: -2px;
   color: $light-black;
+  font-family: "Didot Medium";
 }
 
 h4 {
   font-size: 20px;
   font-weight: 900;
   line-height: 2em;
-  color: $light-black;
+  color: $white;
 }
 
 @media (min-width: 900px) {
@@ -266,32 +305,38 @@ h4 {
   }
 
   h1 {
-    font-weight: 400;
-    font-size: 71px;
+    font-weight: 500;
+    font-size: 100px;
     line-height: 1.1em;
-    font-family: "Libre Bodoni", serif;
+    font-family: "Didot Medium", serif;
+    text-transform: uppercase;
   }
 
   h2 {
     font-size: 62px;
+    font-weight: 400;
+
     color: $dark-blue;
-    letter-spacing: -0.6px;
+    letter-spacing: -5px;
     padding-bottom: 0.27em;
+    line-height: 1em;
   }
 
   h3 {
     font-size: 27px;
     font-weight: 900;
     line-height: 2em;
-    letter-spacing: -2px;
     color: $light-black;
   }
 
-  h4 {
-    font-size: 24px;
-    font-weight: 900;
-    line-height: 2em;
-    color: $light-black;
+  h5 {
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: -1.5px;
+
+    color: $dark-blue;
+    padding-bottom: 0.27em;
+    line-height: 1em;
   }
 }
 
@@ -300,7 +345,7 @@ button {
   background-color: $hilight-color;
   border: none;
   border-radius: 0.3rem;
-  color: white;
+  color: #222647;
   font-size: 16px;
   padding: 1rem 2rem;
   margin: 1.5rem 0;
@@ -314,6 +359,22 @@ button {
 
   &:hover {
     background-color: $hilight-dark;
+  }
+}
+
+.secondary-bttn {
+  background-color: rgb(251, 233, 193);
+  // border: 1px solid rgb(255, 204, 95);
+}
+
+.hero {
+  background-image: url("adults.jpg");
+  background-size: cover;
+
+  &__overlay {
+    background-color: #323861f0;
+    padding: 5rem;
+    padding-top: 8em;
   }
 }
 
@@ -347,8 +408,6 @@ button {
 .home-header {
   background-color: $dark-blue;
   color: white;
-  padding: 5rem;
-  padding-top: 8em;
 
   h1 {
     margin-bottom: 0.5em;
@@ -359,8 +418,8 @@ button {
   }
 
   button {
-    background-color: white;
-    color: $dark-blue;
+    background-color: rgb(255, 177, 8);
+    color: #222647;
 
     &:hover {
       background-color: $light-grey;
@@ -412,8 +471,25 @@ button {
 }
 
 .features {
+  padding: 0em 0;
+  margin-top: -260px;
+
+  .watermark {
+    position: relative;
+    font-size: 300px;
+    font-weight: 900;
+    overflow: hidden;
+    color: #f0f0f08a;
+    z-index: -222222;
+    top: 220px;
+    left: -100px;
+    // background-color: #cc1616;
+  }
+  .h2 {
+    color: $grey;
+  }
   .col {
-    padding: 3em 0;
+    padding-bottom: 6em;
   }
 }
 
@@ -422,6 +498,11 @@ button {
   background-color: $dark-white;
   padding: 3em 0;
   padding-top: 8em;
+}
+
+img {
+  height: 100%;
+  border-radius: 20px;
 }
 
 .CTA-banner {
@@ -445,8 +526,9 @@ button {
 .CTA-thin-banner {
   background-color: $dark-blue;
   color: $white;
+  padding: 5em 0;
 
-  h3 {
+  h5 {
     color: $white;
   }
 
