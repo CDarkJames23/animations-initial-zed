@@ -1,8 +1,10 @@
 $dark-blue: #323861;
-$darker-blue: #222647;
+$mid-blue: #878db4;
+
+$darker-blue: #464b6d;
 $hilight-color: rgb(255, 177, 8);
 $hilight-dark: rgb(212, 148, 9);
-$light-blue: #ecedf397;
+$light-blue: #ecedf3db;
 $grey: #6a7385;
 $white: white;
 $light-black: rgb(62, 62, 62);
@@ -20,9 +22,12 @@ $dark-white: rgba(244, 244, 244, 0.552);
   src: url(fonts/Didot\ Medium.ttf);
 }
 
-.second-section img {
-  border-radius: 20px;
-  width: 100%;
+.second-section {
+  margin: 2em 0;
+  img {
+    border-radius: 20px;
+    width: 100%;
+  }
 }
 
 p {
@@ -452,6 +457,7 @@ body {
 .slider-container {
   background-color: $light-blue;
   padding: 7em 0;
+  padding-bottom: 10em;
   @media (min-width: 768px) {
     .container-right {
       margin-right: 0;
@@ -485,6 +491,7 @@ body {
     padding: 3rem;
     padding-top: 6rem;
     min-height: 420px;
+    width: 550px !important;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -492,11 +499,22 @@ body {
     position: relative;
 
     img {
-      opacity: 0.04;
+      opacity: 0.05;
       width: 200px;
       position: absolute;
       top: 50px;
       left: 20px;
+    }
+
+    p {
+      color: $light-black;
+    }
+
+    .title {
+      p {
+        font-weight: 500;
+        color: $dark-blue;
+      }
     }
 
     // p {
@@ -548,7 +566,7 @@ body {
 
 .mission {
   text-align: center;
-  background-color: $dark-white;
+  background-color: $light-blue;
   padding: 3em 0;
   padding-top: 8em;
 }
@@ -617,8 +635,9 @@ body {
 .prev,
 .next {
   border-radius: 50%;
-  padding: 2rem;
-  border: 2px solid $dark-blue;
+  padding: 1.5rem;
+  margin-left: 10px;
+  border: 2px solid $mid-blue;
   width: 50px;
   height: 50px;
   font-weight: lighter;
@@ -628,9 +647,10 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  color: $mid-blue;
 
   &:hover {
-    background-color: $dark-blue;
+    background-color: $mid-blue;
     color: $white;
   }
 }
@@ -644,13 +664,14 @@ body {
   + .slick-active
   + .slick-slide
   .slider-container__details {
-  opacity: 0.6 !important;
+  opacity: 0.4 !important;
   background-color: white !important;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.05);
 }
 
 .auto-slider-container {
   padding-bottom: 7em;
+  background-color: $light-blue;
 }
 
 .item {

@@ -9,6 +9,9 @@
   font-family: "Didot Medium";
   src: url(fonts/Didot\ Medium.ttf);
 }
+.second-section {
+  margin: 2em 0;
+}
 .second-section img {
   border-radius: 20px;
   width: 100%;
@@ -486,7 +489,7 @@ body {
   color: rgb(199, 201, 217);
 }
 .statistics__number {
-  background-color: #222647;
+  background-color: #464b6d;
   width: 130px;
   height: 130px;
   border-radius: 50%;
@@ -587,8 +590,9 @@ body {
 }
 
 .slider-container {
-  background-color: rgba(236, 237, 243, 0.5921568627);
+  background-color: rgba(236, 237, 243, 0.8588235294);
   padding: 7em 0;
+  padding-bottom: 10em;
 }
 @media (min-width: 768px) {
   .slider-container .container-right {
@@ -619,6 +623,7 @@ body {
   padding: 3rem;
   padding-top: 6rem;
   min-height: 420px;
+  width: 550px !important;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -626,11 +631,18 @@ body {
   position: relative;
 }
 .slider-container__details img {
-  opacity: 0.04;
+  opacity: 0.05;
   width: 200px;
   position: absolute;
   top: 50px;
   left: 20px;
+}
+.slider-container__details p {
+  color: rgb(62, 62, 62);
+}
+.slider-container__details .title p {
+  font-weight: 500;
+  color: #323861;
 }
 .slider-container__subtitle {
   font-family: "Work Sans", sans-serif;
@@ -669,7 +681,7 @@ body {
 
 .mission {
   text-align: center;
-  background-color: rgba(244, 244, 244, 0.552);
+  background-color: rgba(236, 237, 243, 0.8588235294);
   padding: 3em 0;
   padding-top: 8em;
 }
@@ -731,8 +743,9 @@ body {
 .prev,
 .next {
   border-radius: 50%;
-  padding: 2rem;
-  border: 2px solid #323861;
+  padding: 1.5rem;
+  margin-left: 10px;
+  border: 2px solid #878db4;
   width: 50px;
   height: 50px;
   font-weight: lighter;
@@ -742,10 +755,11 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  color: #878db4;
 }
 .prev:hover,
 .next:hover {
-  background-color: #323861;
+  background-color: #878db4;
   color: white;
 }
 
@@ -754,13 +768,14 @@ body {
 }
 
 .slider .slick-active + .slick-active + .slick-slide .slider-container__details {
-  opacity: 0.6 !important;
+  opacity: 0.4 !important;
   background-color: white !important;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
 }
 
 .auto-slider-container {
   padding-bottom: 7em;
+  background-color: rgba(236, 237, 243, 0.8588235294);
 }
 
 .item img {
