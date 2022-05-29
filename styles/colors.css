@@ -1,0 +1,14 @@
+footer p {
+  line-height: 2em;
+}
+footer .link {
+  margin-bottom: 1em !important;
+  color: pink;
+}
+footer a {
+  text-decoration: none;
+  color: #323861;
+}
+footer a:hover {
+  color: rgb(255, 177, 8);
+}/*# sourceMappingURL=colors.css.map */

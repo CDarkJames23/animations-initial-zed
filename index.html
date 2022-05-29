@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/all.min.css" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/index.css" />
 
     <link
       rel="stylesheet"
@@ -77,9 +77,16 @@
 
       <nav id="header">
         <div class="row middle-xs">
-          <div class="col-xs-6"><div class="header-image"></div></div>
-          <div class="col-xs-6 end-xs">
-            <div class="close"><i class="fa-2x fa-solid fa-bars"></i></div>
+          <div class="col-xs-2"><div class="header-image"></div></div>
+          <div class="col-xs-10 end-xs">
+            <ul class="header__links">
+              <li><a href="">Home</a></li>
+              <li><a href="">About Us</a></li>
+              <li><a href="">News</a></li>
+              <li><a href="">Contact</a></li>
+              <li><a href="">Vacancy's</a></li>
+              <li><a href="">Client Referal Form</a></li>
+            </ul>
           </div>
         </div>
       </nav>
@@ -105,18 +112,23 @@
           </div>
         </div>
       </div> -->
+
       <div class="home-header hero">
         <div class="hero__overlay">
           <div class="container" style="padding: 5rem">
             <div class="row center-xs">
               <div class="col-md-7">
-                <h1>Lapis <br /></h1>
-                <p>
+                <div class="type-js">
+                  <div class="hero__title">
+                    <h1 class="text-js">Lapis</h1>
+                  </div>
+                </div>
+                <p class="animatable fadeInUp">
                   Low cost, open-ended specialist disability psychotherapy to
                   anyone with a physical disability or learning disability who
                   lives in London
                 </p>
-                <button>Get in touch!</button>
+                <button class="animatable fadeInUp">Get in touch!</button>
               </div>
             </div>
           </div>
@@ -222,13 +234,15 @@
         <div class="container">
           <div class="row">
             <div class="col-xs-12">
-              <p class="watermark">We help</p>
+              <p class="watermark">
+                We<span style="margin-right: 80px"></span>help
+              </p>
             </div>
           </div>
           <div class="row">
             <div class="col col-md-5">
               <h3>Young People</h3>
-              <p>
+              <p class="">
                 People affected by disability age 5-25 who suffer emotional
                 distress and are afraid of yet another stigma or are not able to
                 access mainstream counselling.
@@ -566,6 +580,46 @@
         } else {
           $("#header").removeClass("active");
         }
+      });
+      // DISCLAIMER: This function does require jQuery. I've used it here because the project I'm building this for already uses jQuery, so I thought why not. It can be modified quite simply to be done in raw JavaScript.  Just thought I'd let you know.
+
+      // This is the funtion you need to copy
+      // Copy from line 9 to 34
+
+      function autoType(elementClass, typingSpeed) {
+        var thhis = $(elementClass);
+        thhis.css({
+          position: "relative",
+          display: "inline-block",
+        });
+        thhis.prepend(
+          '<div class="cursor" style="right: initial; left:0;"></div>'
+        );
+        thhis = thhis.find(".text-js");
+        var text = thhis.text().trim().split("");
+        var amntOfChars = text.length;
+        var newString = "";
+        thhis.text("|");
+        setTimeout(function () {
+          thhis.css("opacity", 1);
+          thhis.prev().removeAttr("style");
+          thhis.text("");
+          for (var i = 0; i < amntOfChars; i++) {
+            (function (i, char) {
+              setTimeout(function () {
+                newString += char;
+                thhis.text(newString);
+              }, i * typingSpeed);
+            })(i + 1, text[i]);
+          }
+        }, 200);
+      }
+
+      $(document).ready(function () {
+        // Now to start autoTyping just call the autoType function with the
+        // class of outer div
+        // The second paramter is the speed between each letter is typed.
+        autoType(".type-js", 200);
       });
     });
   </script>

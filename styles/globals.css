@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+
+@font-face {
+  font-family: "Didot Medium";
+  src: url(fonts/Didot\ Medium.ttf);
+}
+img {
+  width: 100%;
+}/*# sourceMappingURL=globals.css.map */
