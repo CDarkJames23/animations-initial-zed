@@ -66,8 +66,11 @@ body > #header {
 #header.active .header-image {
   background-image: url("lapis-logo.png");
 }
-#header.active__links a {
+#header.active a {
   color: #323861;
+}
+#header.active a:hover {
+  color: rgb(255, 177, 8);
 }
 
 * {
@@ -89,14 +92,14 @@ img {
 p {
   font-size: 18px;
   font-weight: 300;
-  color: #697285;
+  color: #6a7385;
   font-family: "Roboto", sans-serif;
   line-height: 1.7em;
 }
 
 .small {
   font-size: 16px;
-  color: #697285;
+  color: #6a7385;
   font-weight: 500;
 }
 
@@ -510,7 +513,7 @@ img {
 }
 
 .hero {
-  background-image: url("adults.jpg");
+  background-image: url("../adults.jpg");
   background-size: cover;
   background-color: #323861;
   color: white;
@@ -595,7 +598,7 @@ img {
 }
 
 .slider-container {
-  background-color: #e3ecec;
+  background-color: rgba(236, 237, 243, 0.5921568627);
   padding: 7em 0;
 }
 .slider-container__overlay {
@@ -642,7 +645,7 @@ img {
   left: -100px;
 }
 .features .h2 {
-  color: #697285;
+  color: #6a7385;
 }
 .features .col {
   padding-bottom: 6em;
