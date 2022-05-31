@@ -72,8 +72,9 @@ h3 {
   font-size: 27px;
   font-weight: 900;
   line-height: 2em;
+  letter-spacing: -2px;
+
   color: $light-black;
-  font-family: "Didot Medium";
 }
 
 h4 {
@@ -550,7 +551,7 @@ body {
     font-size: 300px;
     font-weight: 900;
     overflow: hidden;
-    color: #f0f0f081;
+    color: #f0f0f0;
     white-space: nowrap !important;
     z-index: -222222 !important;
     top: 220px;
