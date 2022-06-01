@@ -13,7 +13,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css"
       type="text/css"
     />
-    <link rel="stylesheet" href="css/flexboxgrid.min.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="css/flexboxgrid.min.css" type="text/css" /> -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
@@ -92,14 +92,18 @@
       </nav>
       <div class="slider-overlay">
         <div class="container">
-          <div class="row">
+          <div class="row middle-xs">
             <div class="col-xs-6">
-              <h1>Lapis</h1>
-              <p class="animatable fadeInUp">
+              <div class="slider-overlay__content">
+                <h2 style="color: white">Affordable Psychotheraphy</h2>
+                <p style="color: white; font-weight: 400" id="cookie-alert"></p>
+                <!-- <p class="animatable fadeInUp">
                 Low cost, open-ended specialist disability psychotherapy to
                 anyone with a physical disability or learning disability who
                 lives in London
-              </p>
+              </p> -->
+                <button>Contact us</button>
+              </div>
             </div>
           </div>
         </div>
@@ -115,11 +119,40 @@
         <button class="animatable fadeInUp">Get in touch!</button> -->
       </div>
 
-      <div class="row slider2">
-        <img src="adults.jpg" />
-        <img src="adults.jpg" />
-        <img src="adults.jpg" />
+      <div class="Modern-Slider">
+        <!-- Item -->
+        <div class="item">
+          <div class="img-fill">
+            <img src="adults.jpg" alt="" />
+            <div class="info"></div>
+          </div>
+        </div>
+        <!-- // Item -->
+        <!-- Item -->
+        <div class="item">
+          <div class="img-fill">
+            <img src="young-people.jpg" alt="" />
+            <div class="info"></div>
+          </div>
+        </div>
+        <!-- // Item -->
+        <!-- Item -->
+        <div class="item">
+          <div class="img-fill">
+            <img src="organisations.jpg" alt="" />
+            <div class="info"></div>
+          </div>
+        </div>
       </div>
+
+      <!-- <div class="slider2">
+        <div class="div">
+          <img src="adults2.jpg" />
+        </div>
+        <div class="div">
+          <img src="adults2.jpg" />
+        </div>
+      </div> -->
 
       <!-- header -->
       <!-- <div class="hero">
@@ -143,7 +176,7 @@
         </div>
       </div> -->
 
-      <div class="home-header hero">
+      <!-- <div class="home-header hero">
         <div class="hero__overlay">
           <div class="container" style="padding: 5rem">
             <div class="row center-xs">
@@ -163,7 +196,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <div class="container second-section">
         <div class="row middle-xs">
@@ -658,4 +691,5 @@
   <script type="text/javascript" src="jquery/slider.js"></script>
   <script type="text/javascript" src="jquery/auto-slider.js"></script>
   <script type="text/javascript" src="jquery/slider2.js"></script>
+  <script type="text/javascript" src="jquery/dynamic-text.js"></script>
 </html>

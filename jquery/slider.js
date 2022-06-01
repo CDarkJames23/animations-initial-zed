@@ -3,7 +3,6 @@ $(".slider").slick({
   ltl: true,
   infinite: true,
   speed: 300,
-  variableWidth: true,
   slidesToShow: 2,
   slidesToScroll: 1,
   prevArrow: $(".prev"),

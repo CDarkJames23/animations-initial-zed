@@ -6,7 +6,7 @@ jQuery(document).ready(function ($) {
     cssEase: "linear",
     slidesToShow: 1,
     slidesToScroll: 1,
-    variableWidth: true,
+    // variableWidth: true,
     arrows: false,
   });
 });
