@@ -5,7 +5,7 @@
   position: relative;
   text-align: center;
   height: 80vh;
-  max-height: 580px;
+  max-height: 630px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: right top;
@@ -18,7 +18,7 @@
   display: inline-block;
   max-width: none;
   height: 80vh;
-  max-height: 580px;
+  max-height: 630px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: right top;
@@ -62,14 +62,14 @@
   line-height: 100vh;
   text-align: center;
   height: 100vh;
-  max-height: 580px;
+  max-height: 630px;
 }
 
 .Modern-Slider .item .info > div {
   display: inline-block !important;
   vertical-align: middle;
   height: 80vh;
-  max-height: 580px;
+  max-height: 630px;
 }
 
 .slider-overlay {
@@ -77,18 +77,23 @@
   margin-top: 80px;
   min-height: 400px;
   height: 80vh;
-  max-height: 580px;
+  max-height: 630px;
   position: absolute;
   top: 0;
   background: linear-gradient(90deg, rgba(50, 56, 97, 0.85) 40%, rgba(50, 56, 97, 0.6973564426) 58%, rgba(0, 212, 255, 0) 74%);
   z-index: 1;
 }
 .slider-overlay__content {
-  padding-top: 25%;
+  padding-top: 20%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: center !important;
+}
+@media (max-width: 1500px) {
+  .slider-overlay__content {
+    padding-top: 10%;
+  }
 }
 .slider-overlay h2 {
   font-size: 83px;
@@ -102,6 +107,9 @@
   color: white;
   font-family: "Work Sans", sans-serif;
   line-height: 1.3em;
+}
+.slider-overlay button {
+  margin-top: 3rem;
 }
 
 * {
