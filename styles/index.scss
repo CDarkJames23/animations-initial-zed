@@ -4,7 +4,12 @@
   overflow: hidden;
   position: relative;
   text-align: center;
-  margin-top: 80px;
+  height: 80vh;
+  max-height: 580px;
+  object-fit: cover;
+  object-position: right top;
+
+  // margin-top: 80px;
 }
 
 .img-fill img {
@@ -12,6 +17,10 @@
   position: relative;
   display: inline-block;
   max-width: none;
+  height: 80vh;
+  max-height: 580px;
+  object-fit: cover;
+  object-position: right top;
 }
 
 *,
@@ -52,18 +61,22 @@
   background: rgba(0, 0, 0, 0.5);
   line-height: 100vh;
   text-align: center;
+  height: 100vh;
+  max-height: 580px;
 }
 
 .Modern-Slider .item .info > div {
   display: inline-block !important;
   vertical-align: middle;
+  height: 80vh;
+  max-height: 580px;
 }
 
 .slider-overlay {
   width: 100%;
   margin-top: 80px;
   min-height: 400px;
-  height: 100vh;
+  height: 80vh;
   max-height: 580px;
   position: absolute;
   top: 0;
@@ -96,15 +109,15 @@
     font-family: "Work Sans", sans-serif;
     line-height: 1.3em;
   }
-  z-index: 2;
+  z-index: 1;
 }
 
 $dark-blue: #323861;
 $mid-blue: #878db4;
 
 $darker-blue: #464b6d;
-$hilight-color: rgb(255, 177, 8);
-$hilight-dark: rgb(212, 148, 9);
+$hilight-color: rgb(255, 255, 255);
+$hilight-dark: rgba(244, 244, 244, 0.552);
 $light-blue: #ecedf3db;
 $grey: #6a7385;
 $white: white;
@@ -292,7 +305,7 @@ body > #header {
 
 #header {
   position: fixed;
-  z-index: 9000;
+  z-index: 90000000000;
   overflow: auto;
   transition: all 0.15s linear;
   overflow: hidden;
@@ -301,7 +314,7 @@ body > #header {
 }
 
 .header-image {
-  background-image: url("lapis-logo-light.png");
+  background-image: url("lapis-logo.png");
   width: 170px;
   height: 50px;
   background-size: cover;
@@ -363,7 +376,7 @@ body > #header {
 
 #header {
   position: fixed;
-  z-index: 9000;
+  z-index: 900000000000;
   overflow: auto;
   transition: all 0.15s linear;
   overflow: hidden;
@@ -372,10 +385,16 @@ body > #header {
 }
 
 .header-image {
-  background-image: url("../lapis-logo-light.png");
+  background-image: url("../lapis-logo.png");
   width: 170px;
   height: 50px;
   background-size: cover;
+
+  &__links {
+    a {
+      color: $dark-blue;
+    }
+  }
 }
 
 #header.active {
@@ -485,7 +504,7 @@ body {
 }
 
 .header {
-  background-color: $dark-blue;
+  // background-color: $dark-blue;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
   position: fixed;
   width: 100%;
@@ -503,13 +522,13 @@ body {
     }
     a {
       text-decoration: none;
-      color: $white;
+      color: $dark-blue;
       font-weight: 400;
       transition: 1s;
       text-decoration: none;
 
       &:hover {
-        color: $hilight-color;
+        font-weight: 700;
       }
     }
   }
@@ -772,7 +791,7 @@ body {
 }
 
 .auto-slider-container {
-  margin-bottom: 7em;
+  padding-bottom: 7em;
   background-color: $light-blue;
 }
 
@@ -832,4 +851,22 @@ footer {
   .slick .slick-list {
     padding: 0 20% 0 0 !important;
   }
+}
+
+#header {
+  z-index: 999999;
+  background-color: white;
+}
+
+.Modern-Slider {
+  overflow: hidden;
+}
+
+.item:nth-child(n + 1) {
+  display: none;
+}
+
+.slick-initialized,
+.item:first-child {
+  display: block;
 }

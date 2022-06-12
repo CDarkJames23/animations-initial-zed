@@ -4,7 +4,12 @@
   overflow: hidden;
   position: relative;
   text-align: center;
-  margin-top: 80px;
+  height: 80vh;
+  max-height: 580px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: right top;
+     object-position: right top;
 }
 
 .img-fill img {
@@ -12,6 +17,12 @@
   position: relative;
   display: inline-block;
   max-width: none;
+  height: 80vh;
+  max-height: 580px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: right top;
+     object-position: right top;
 }
 
 *,
@@ -50,23 +61,27 @@
   background: rgba(0, 0, 0, 0.5);
   line-height: 100vh;
   text-align: center;
+  height: 100vh;
+  max-height: 580px;
 }
 
 .Modern-Slider .item .info > div {
   display: inline-block !important;
   vertical-align: middle;
+  height: 80vh;
+  max-height: 580px;
 }
 
 .slider-overlay {
   width: 100%;
   margin-top: 80px;
   min-height: 400px;
-  height: 100vh;
+  height: 80vh;
   max-height: 580px;
   position: absolute;
   top: 0;
   background: linear-gradient(90deg, rgba(50, 56, 97, 0.85) 40%, rgba(50, 56, 97, 0.6973564426) 58%, rgba(0, 212, 255, 0) 74%);
-  z-index: 2;
+  z-index: 1;
 }
 .slider-overlay__content {
   padding-top: 25%;
@@ -205,7 +220,7 @@ h5 {
 }
 button {
   display: inline-block;
-  background-color: rgb(255, 177, 8);
+  background-color: rgb(255, 255, 255);
   border: none;
   border-radius: 0.3rem;
   color: #222647;
@@ -220,7 +235,7 @@ button i {
   padding-left: 1em;
 }
 button:hover {
-  background-color: rgb(212, 148, 9);
+  background-color: rgba(244, 244, 244, 0.552);
 }
 
 .secondary-bttn {
@@ -273,7 +288,7 @@ body > #header {
 
 #header {
   position: fixed;
-  z-index: 9000;
+  z-index: 90000000000;
   overflow: auto;
   transition: all 0.15s linear;
   overflow: hidden;
@@ -282,7 +297,7 @@ body > #header {
 }
 
 .header-image {
-  background-image: url("lapis-logo-light.png");
+  background-image: url("lapis-logo.png");
   width: 170px;
   height: 50px;
   background-size: cover;
@@ -299,7 +314,7 @@ body > #header {
   color: #323861;
 }
 #header.active a:hover {
-  color: rgb(255, 177, 8);
+  color: rgb(255, 255, 255);
 }
 
 .animatable {
@@ -315,13 +330,13 @@ body > #header {
   visibility: visible;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  -webkit-animation-duration: 1.5s;
-  animation-duration: 1.5s;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
   -webkit-animation-play-state: running;
   animation-play-state: running;
 }
 
-@-webkit-keyframes fadeInUp {
+@-webkit-keyframes fadeInUpSlow {
   0% {
     opacity: 0;
     transform: scale(0);
@@ -331,7 +346,7 @@ body > #header {
     width: 100%;
   }
 }
-@keyframes fadeInUp {
+@keyframes fadeInUpSlow {
   0% {
     transform: scale(0);
     opacity: 0;
@@ -341,25 +356,9 @@ body > #header {
     width: 100%;
   }
 }
-.animated.fadeInUp {
-  -webkit-animation-name: fadeInUp;
-  animation-name: fadeInUp;
-}
-@-webkit-keyframes bounceInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-2000px);
-  }
-  60% {
-    transform: translateX(20px);
-  }
-  80% {
-    transform: translateX(-5px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.animated.fadeInUpSlow {
+  -webkit-animation-name: fadeInUpSlow;
+  animation-name: fadeInUpSlow;
 }
 @keyframes bounceInLeft {
   0% {
@@ -432,13 +431,13 @@ body > #header {
   visibility: visible;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  -webkit-animation-duration: 3s;
-  animation-duration: 3s;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
   -webkit-animation-play-state: running;
   animation-play-state: running;
 }
 
-@-webkit-keyframes fadeInUp {
+@-webkit-keyframes fadeInUpSlow {
   0% {
     opacity: 0;
     -webkit-transform: translateY(60px);
@@ -446,6 +445,164 @@ body > #header {
   40% {
     opacity: 0;
     -webkit-transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+@keyframes fadeInUpSlow {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(60px);
+  }
+  40% {
+    opacity: 0;
+    -webkit-transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+.animated.fadeInUpSlow {
+  -webkit-animation-name: fadeInUpSlow;
+  animation-name: fadeInUpSlow;
+}
+
+.animatable {
+  /* initially hide animatable objects */
+  visibility: hidden;
+  /* initially pause animatable objects their animations */
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+/* show objects being animated */
+.animated {
+  visibility: visible;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+/* CSS Animations (extracted from http://glifo.uiparade.com/) */
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes bounceInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+  }
+  60% {
+    -webkit-transform: translateX(20px);
+  }
+  80% {
+    -webkit-transform: translateX(-5px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+@keyframes bounceInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-2000px);
+  }
+  60% {
+    transform: translateX(20px);
+  }
+  80% {
+    transform: translateX(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes bounceInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+  }
+  60% {
+    -webkit-transform: translateX(-20px);
+  }
+  80% {
+    -webkit-transform: translateX(5px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+@keyframes bounceInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(2000px);
+  }
+  60% {
+    transform: translateX(-20px);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
   }
   100% {
     opacity: 1;
@@ -455,20 +612,140 @@ body > #header {
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(60px);
+    transform: translateY(20px);
   }
-  40% {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes bounceIn {
+  0% {
     opacity: 0;
-    -webkit-transform: translateY(60px);
+    -webkit-transform: scale(0.3);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+  }
+  70% {
+    -webkit-transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes moveUp {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(40px);
   }
   100% {
     opacity: 1;
     -webkit-transform: translateY(0);
   }
 }
+@keyframes moveUp {
+  0% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes fadeBgColor {
+  0% {
+    background: none;
+  }
+  70% {
+    background: none;
+  }
+  100% {
+    background: #464646;
+  }
+}
+@keyframes fadeBgColor {
+  0% {
+    background: none;
+  }
+  70% {
+    background: none;
+  }
+  100% {
+    background: #464646;
+  }
+}
+.animated.animationDelay {
+  animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+}
+
+.animated.animationDelayMed {
+  animation-delay: 1.2s;
+  -webkit-animation-delay: 1.2s;
+}
+
+.animated.animationDelayLong {
+  animation-delay: 1.6s;
+  -webkit-animation-delay: 1.6s;
+}
+
+.animated.fadeBgColor {
+  -webkit-animation-name: fadeBgColor;
+  animation-name: fadeBgColor;
+}
+
+.animated.bounceIn {
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+}
+
+.animated.bounceInRight {
+  -webkit-animation-name: bounceInRight;
+  animation-name: bounceInRight;
+}
+
+.animated.bounceInLeft {
+  -webkit-animation-name: bounceInLeft;
+  animation-name: bounceInLeft;
+}
+
+.animated.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+.animated.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
 .animated.fadeInUp {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
+}
+
+.animated.moveUp {
+  -webkit-animation-name: moveUp;
+  animation-name: moveUp;
 }
 
 .text-js {
@@ -508,7 +785,7 @@ body > #header {
 
 #header {
   position: fixed;
-  z-index: 9000;
+  z-index: 900000000000;
   overflow: auto;
   transition: all 0.15s linear;
   overflow: hidden;
@@ -517,10 +794,13 @@ body > #header {
 }
 
 .header-image {
-  background-image: url("../lapis-logo-light.png");
+  background-image: url("../lapis-logo.png");
   width: 170px;
   height: 50px;
   background-size: cover;
+}
+.header-image__links a {
+  color: #323861;
 }
 
 #header.active {
@@ -620,7 +900,6 @@ body {
 }
 
 .header {
-  background-color: #323861;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
@@ -639,13 +918,13 @@ body {
 }
 .header__links a {
   text-decoration: none;
-  color: white;
+  color: #323861;
   font-weight: 400;
   transition: 1s;
   text-decoration: none;
 }
 .header__links a:hover {
-  color: rgb(255, 177, 8);
+  font-weight: 700;
 }
 
 .overflow {
@@ -667,7 +946,7 @@ body {
   border-radius: 6px;
 }
 .blog span a {
-  color: rgb(255, 177, 8);
+  color: rgb(255, 255, 255);
   text-decoration: none;
   font-weight: 600;
 }
@@ -919,4 +1198,21 @@ footer .p2 {
   .slick .slick-list {
     padding: 0 20% 0 0 !important;
   }
+}
+#header {
+  z-index: 999999;
+  background-color: white;
+}
+
+.Modern-Slider {
+  overflow: hidden;
+}
+
+.item:nth-child(n+1) {
+  display: none;
+}
+
+.slick-initialized,
+.item:first-child {
+  display: block;
 }/*# sourceMappingURL=index.css.map */
