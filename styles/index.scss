@@ -8,7 +8,7 @@ $light-blue: #ecedf3db;
 $grey: #515969;
 $white: white;
 $light-black: rgb(62, 62, 62);
-$dark-white: rgba(244, 244, 244, 0.552);
+$dark-white: rgb(206, 206, 206);
 
 * {
   margin: 0;
@@ -373,6 +373,14 @@ body {
       list-style-type: none;
       margin-left: 2em;
       font-size: 18px;
+      &:last-of-type {
+        background-color: $dark-blue;
+        padding: 0.5em 1em;
+        border-radius: 5px;
+        a {
+          color: $white;
+        }
+      }
     }
     a {
       text-decoration: none;
@@ -424,6 +432,25 @@ body {
   color: white;
   p {
     color: $white;
+  }
+}
+
+//slim-banner
+
+.slim-banner {
+  background: $dark-blue;
+  padding: 2.7em 0;
+  h2 {
+    color: $white;
+  }
+  p {
+    color: $dark-white;
+  }
+  button {
+    background-color: white;
+    &:hover {
+      background-color: $dark-white;
+    }
   }
 }
 

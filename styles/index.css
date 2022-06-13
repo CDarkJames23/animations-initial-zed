@@ -832,6 +832,14 @@ body {
   margin-left: 2em;
   font-size: 18px;
 }
+.header__links li:last-of-type {
+  background-color: #323861;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+}
+.header__links li:last-of-type a {
+  color: white;
+}
 .header__links a {
   text-decoration: none;
   color: #323861;
@@ -873,6 +881,23 @@ body {
 }
 .home-header p {
   color: white;
+}
+
+.slim-banner {
+  background: #323861;
+  padding: 2.7em 0;
+}
+.slim-banner h2 {
+  color: white;
+}
+.slim-banner p {
+  color: rgb(206, 206, 206);
+}
+.slim-banner button {
+  background-color: white;
+}
+.slim-banner button:hover {
+  background-color: rgb(206, 206, 206);
 }
 
 .slider-container {
