@@ -479,8 +479,4 @@
 .animated.moveUp {
   -webkit-animation-name: moveUp;
   animation-name: moveUp;
-}
-
-* {
-  background-color: aqua;
 }/*# sourceMappingURL=animations.css.map */
