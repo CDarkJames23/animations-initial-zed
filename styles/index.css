@@ -118,7 +118,7 @@ button {
   border: none;
   border-radius: 0.3rem;
   color: #222647;
-  font-size: 19px;
+  font-size: 23px;
   padding: 1rem 2rem;
   margin: 1.5rem 0;
   transition: 1s;
@@ -787,7 +787,8 @@ body {
 
 .home-header p {
   color: white;
-  font-size: 25px !important;
+  font-size: 28px !important;
+  margin-bottom: 2rem !important;
 }
 
 .hero {
